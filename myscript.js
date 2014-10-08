@@ -82,7 +82,7 @@ channels = ["trance",
 
 var shuffleButtonLI = document.createElement("li");
 var shuffleButtonA = document.createElement("a");
-shuffleButtonA.innerHTML = "Shuffle Channel";
+shuffleButtonA.innerHTML = "Shuffle";
 shuffleButtonLI.onclick = function () { 
        randomChan = channels[Math.floor(Math.random()*channels.length)];
        window.location.replace(randomChan);
@@ -90,4 +90,3 @@ shuffleButtonLI.onclick = function () {
 shuffleButtonLI.appendChild(shuffleButtonA);
 var nav = document.querySelector('nav[class="main"]')
 nav.childNodes[1].appendChild(shuffleButtonLI);
-

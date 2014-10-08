@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "DiFmShuffle",
 	"description": "Allows you to shuffle between stations at di.fm",
-	"version": "1.0",
+	"version": "1.1",
 
 	"permissions": [
 		"http://di.fm/*",
