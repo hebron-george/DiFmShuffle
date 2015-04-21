@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "DiFmShuffle",
 	"description": "Allows you to shuffle between stations at di.fm",
-	"version": "1.1",
+	"version": "1.2",
 
 	"permissions": [
 		"http://di.fm/*",
@@ -10,9 +10,13 @@
 		"http://www.di.fm/*",
 		"https://www.di.fm/*"
 	],
+  	"web_accessible_resources": [
+  		"injectButton.js"
+  		],
   	"content_scripts": [{
 	    "matches": ["http://www.di.fm/*", "https://www.di.fm/*", "http://di.fm/*", "https://di.fm/*"],
 	    "js": ["myscript.js"],
+	    "css": ["custom.css"],
 	    "run_at": "document_end"
   	}]
 }
