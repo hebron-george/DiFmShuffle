@@ -5,17 +5,25 @@
 	"version": "1.2",
 
 	"permissions": [
+		"storage",
 		"http://di.fm/*",
 		"https://di.fm/*",
 		"http://www.di.fm/*",
-		"https://www.di.fm/*"
+		"https://www.di.fm/*",
+		"http://www.hebrongeorge.com/",
+		"http://hebrongeorge.com/"
 	],
   	"web_accessible_resources": [
-  		"injectButton.js"
   		],
   	"content_scripts": [{
 	    "matches": ["http://www.di.fm/*", "https://www.di.fm/*", "http://di.fm/*", "https://di.fm/*"],
-	    "js": ["myscript.js"],
+	    "js": ["myscript.js", "bootstrap.min.js", "jquery-1.11.3.min.js", "injectButton.js"],
+	    "css": ["options.css"],
 	    "run_at": "document_end"
-  	}]
+  	}],
+  	"background": {
+  		"scripts": ["eventPage.js", "jquery-1.11.3.min.js"],
+  		"persistent": false
+  	},
+  	"options_page": "options.html"
 }
