@@ -1,5 +1,5 @@
 {
-	"manifest_version": 3,
+	"manifest_version": 2,
 	"name": "DiFmShuffle",
 	"description": "Allows you to shuffle between stations at di.fm",
 	"version": "1.3",
