@@ -1,8 +1,8 @@
 function randChan() {
    if (typeof AudioAddict != "undefined"){
-         var channels = AudioAddict.WP.channels.map(function(chan) { return chan.key });
+         var channels = AudioAddict.WP.channels;
          channel = channels[Math.floor(Math.random()*channels.length)];
-         di.app.webplayer.app.commands.execute("webplayer:play:channel", channel)
+         di.app.WebplayerApp.app.commands.execute("webplayer:play:channel", channel.id);
    } else {
       console.log("AudioAddict is not defined!");
    }
